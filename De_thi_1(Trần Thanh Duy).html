@@ -15,6 +15,16 @@
         table {
             width: 100%;
         }
+        #btnCreate{
+            background-color: #88ec88;
+            color: red;
+            border-radius: 8px;
+        }
+        #btnSearch{
+            background-color: #36f6f6;
+            border-radius: 8px;
+        }
+
 
     </style>
 </head>
@@ -27,8 +37,8 @@
 <button id="btnSearch">Search</button>
 
 <table border="1" id="table">
-    <tr>
-        <th colspan="4">STUDENT MANAGE</th>
+    <tr style="border: 1px solid deeppink">
+        <th colspan="4" style="color: blue">STUDENT MANAGE</th>
     </tr>
     <tr>
         <th>STT</th>
@@ -58,9 +68,9 @@
                 } else if (j == 1) {
                     column.innerHTML = inputName;
                 } else if (j == 2) {
-                    column.innerHTML = '<button onclick="updateStudent()">Edit</button>';
+                    column.innerHTML = '<button style="background-color: blue; color: white; border-radius: 8px" onclick="updateStudent()">Edit</button>';
                 } else {
-                    column.innerHTML = '<button onclick="deleteStudent()">Delete</button>';
+                    column.innerHTML = '<button style="background-color: red; color: white; border-radius: 8px" onclick="deleteStudent()">Delete</button>';
                 }
             }
         }
@@ -68,7 +78,7 @@
     }
 
     function updateStudent() {
-        prompt('Enter the name to edit ---->' + inputName);
+        prompt('Enter the name to edit ----> Ngan');
     }
 
     function deleteStudent() {
